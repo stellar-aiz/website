@@ -1,8 +1,445 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- SEO Meta -->
+  <title>Stellar AIz - 戦略と爆速開発で、AIの実践力を極める</title>
+  <meta name="description" content="Stellar AIzは、戦略策定から爆速開発まで一貫したAI導入支援を提供。PoCを2-3ヶ月で実現し、ビジネスインパクトを最大化します。">
+  
+  <!-- OGP -->
+  <meta property="og:site_name" content="Stellar AIz">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="Stellar AIz - 戦略と爆速開発で、AIの実践力を極める">
+  <meta property="og:description" content="Stellar AIzは、戦略策定から爆速開発まで一貫したAI導入支援を提供。PoCを2-3ヶ月で実現し、ビジネスインパクトを最大化します。">
+  <meta property="og:url" content="https://stellar-aiz.com/">
+  <meta property="og:image" content="https://stellar-aiz.com/assets/images/ogp/home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script src="./assets/js/tailwind-config.js"></script>
+  
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="./assets/css/common.css">
+  
+  <!-- Rellax.js (Parallax) -->
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 </head>
-<body>
-    <h1>This is just placeholder: Hello, world!</h1>
+<body class="bg-white text-gray-800">
+  <!-- Header Navigation -->
+  <header class="site-header fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 shadow-sm">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="header-content flex justify-between items-center h-full">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="./" aria-label="Stellar AIz ホーム">
+            <img src="./assets/images/logo/logo.png" alt="Stellar AIz" class="h-10">
+          </a>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav" aria-label="メインナビゲーション">
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-toggle md:hidden p-2" aria-label="メニューを開く">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          <!-- Navigation List -->
+          <ul class="nav-list hidden md:flex items-center space-x-8">
+            <li><a href="./" class="nav-link text-blue-600 font-medium">ホーム</a></li>
+            <li><a href="./services/" class="nav-link hover:text-blue-600 transition-colors">サービス</a></li>
+            <li><a href="./record/" class="nav-link hover:text-blue-600 transition-colors">実績</a></li>
+            <li><a href="./about/" class="nav-link hover:text-blue-600 transition-colors">会社情報</a></li>
+            <li><a href="./news/" class="nav-link hover:text-blue-600 transition-colors">ニュース</a></li>
+            <li><a href="./inquiry/" class="btn-primary-stellar">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <!-- Parallax Background -->
+      <div class="absolute inset-0 rellax" data-rellax-speed="-5">
+        <div class="absolute inset-0 bg-gradient-to-br from-stellar-dark/90 to-stellar-primary/20"></div>
+      </div>
+      
+      <!-- Hero Content -->
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="text-center text-white animate-fadein">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            戦略と爆速開発で、<br>
+            AIの実践力を極める
+          </h1>
+          <p class="text-xl md:text-2xl mb-10 text-gray-300">
+            PoCに1年はもう古い。Stellar AIzは2〜3ヶ月で成果を出す。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="./services/" class="btn-primary-stellar text-lg px-8 py-4">
+              サービスを見る
+            </a>
+            <a href="./inquiry/" class="btn-secondary-stellar text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-gray-900">
+              PoCを相談する
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Stellar AIzとは Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="section-title-stellar text-center">Stellar AIzとは</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
+          <!-- 戦略 × 爆速開発 -->
+          <div class="text-center animate-fadein">
+            <div class="w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">戦略 × 爆速開発</h3>
+            <p class="text-gray-600">戦略立案からPoC開発まで一貫して支援。スピードと品質を両立します。</p>
+          </div>
+          
+          <!-- アジャイル & 実践主義 -->
+          <div class="text-center animate-fadein" style="animation-delay: 0.1s;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
+              <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">アジャイル & 実践主義</h3>
+            <p class="text-gray-600">完璧な要件定義より、まず動くものを。実践を通じて最適解を見つけます。</p>
+          </div>
+          
+          <!-- 未知への挑戦文化 -->
+          <div class="text-center animate-fadein" style="animation-delay: 0.2s;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center">
+              <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">未知への挑戦文化</h3>
+            <p class="text-gray-600">新しい技術、新しい課題に果敢に挑戦。イノベーションを共に創造します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 行動原則（5ミッション） Section -->
+    <section class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="section-title-stellar text-center">行動原則</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+          Stellar AIzの5つのミッション
+        </p>
+        
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <!-- Mission 1 -->
+          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              1
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">要件が曖昧でも、とにかくつくる</h3>
+              <p class="text-gray-600">完璧な仕様書を待つより、プロトタイプで対話を始める。実物を見ながら要件を明確化していきます。</p>
+            </div>
+          </div>
+          
+          <!-- Mission 2 -->
+          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1.5">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              2
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">成果ベースの報酬モデル</h3>
+              <p class="text-gray-600">時間ではなく、価値で評価される。お客様の成功が、私たちの成功です。</p>
+            </div>
+          </div>
+          
+          <!-- Mission 3 -->
+          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              3
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">PM力より、開発力</h3>
+              <p class="text-gray-600">管理より実装。手を動かし、コードで語る。それが最速の問題解決です。</p>
+            </div>
+          </div>
+          
+          <!-- Mission 4 -->
+          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1.5">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              4
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">課題解決のための戦略にこだわる</h3>
+              <p class="text-gray-600">技術は手段。真の目的は課題解決。ビジネスインパクトを最大化する戦略を追求します。</p>
+            </div>
+          </div>
+          
+          <!-- Mission 5 -->
+          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              5
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">顧客インパクトを最優先に</h3>
+              <p class="text-gray-600">すべての判断基準は「顧客価値」。短期的な利益より、長期的な信頼関係を大切にします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- サービスサマリー Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="section-title-stellar text-center">提供サービス</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+          戦略策定から実装まで、AIの実践を総合的に支援します
+        </p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- 生成AI導入支援 -->
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+            <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">生成AI導入支援</h3>
+            <p class="text-gray-600 text-sm">ChatGPT、Claude等の生成AIを業務に組み込む支援</p>
+          </div>
+          
+          <!-- 戦略策定支援 -->
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+            <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-lg flex items-center justify-center">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">戦略策定支援</h3>
+            <p class="text-gray-600 text-sm">DX/AIロードマップの策定と実行計画の立案</p>
+          </div>
+          
+          <!-- 爆速PoC開発 -->
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+            <div class="w-16 h-16 mx-auto mb-4 bg-cyan-100 rounded-lg flex items-center justify-center">
+              <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">爆速PoC開発</h3>
+            <p class="text-gray-600 text-sm">2-3ヶ月で動くプロトタイプを開発・検証</p>
+          </div>
+          
+          <!-- 開発組織・人材育成 -->
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+            <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">開発組織・人材育成</h3>
+            <p class="text-gray-600 text-sm">AI開発チームの立ち上げと内製化支援</p>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="./services/" class="btn-primary-stellar inline-flex items-center gap-2">
+            サービス詳細を見る
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実績ハイライト Section -->
+    <section class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="section-title-stellar text-center">実績ハイライト</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+          多様な業界でAI導入を成功に導いています
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- 製造業 -->
+          <div class="card-stellar">
+            <div class="text-blue-600 font-bold mb-2">製造業</div>
+            <h3 class="text-xl font-bold mb-3">大手電機メーカー</h3>
+            <p class="text-gray-600 mb-4">全バリューチェーンのAI導入戦略策定</p>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>期間：6週間</span>
+            </div>
+          </div>
+          
+          <!-- 金融業 -->
+          <div class="card-stellar">
+            <div class="text-purple-600 font-bold mb-2">金融業</div>
+            <h3 class="text-xl font-bold mb-3">大手銀行</h3>
+            <p class="text-gray-600 mb-4">AIアーキテクチャ戦略の立案と実装支援</p>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>期間：8週間</span>
+            </div>
+          </div>
+          
+          <!-- 海外スタートアップ -->
+          <div class="card-stellar">
+            <div class="text-cyan-500 font-bold mb-2">海外スタートアップ</div>
+            <h3 class="text-xl font-bold mb-3">遠隔医療スタートアップ</h3>
+            <p class="text-gray-600 mb-4">資金調達向けAI機能のPoC開発</p>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>期間：3週間</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="./record/" class="btn-secondary-stellar inline-flex items-center gap-2">
+            実績詳細を見る
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          AIで、ビジネスを次のステージへ
+        </h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+          まずは気軽にご相談ください。貴社の課題に合わせた最適なAI活用方法をご提案します。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="./inquiry/" class="btn-accent-stellar text-lg px-8 py-4">
+            無料相談を申し込む
+          </a>
+          <a href="./services/" class="bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-blue-600 font-medium px-8 py-4 rounded-md transition-all duration-300 inline-block">
+            サービス資料をダウンロード
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer bg-gray-900 text-white py-16 md:py-20">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="footer-content grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+        <!-- Company Info -->
+        <div>
+          <div class="mb-4">
+            <img src="./assets/images/logo/logo.png" alt="Stellar AIz" class="h-10 brightness-0 invert">
+          </div>
+          <p class="text-gray-300 mb-2">戦略と爆速開発で、AIの実践力を極める</p>
+          <p class="text-gray-400 text-sm">Stellar AIz</p>
+        </div>
+        
+        <!-- Sitemap -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">サイトマップ</h3>
+          <nav aria-label="フッターナビゲーション">
+            <ul class="space-y-2">
+              <li><a href="./" class="text-gray-300 hover:text-white transition-colors">ホーム</a></li>
+              <li><a href="./services/" class="text-gray-300 hover:text-white transition-colors">サービス</a></li>
+              <li><a href="./record/" class="text-gray-300 hover:text-white transition-colors">実績</a></li>
+              <li><a href="./about/" class="text-gray-300 hover:text-white transition-colors">会社情報</a></li>
+              <li><a href="./news/" class="text-gray-300 hover:text-white transition-colors">ニュース</a></li>
+              <li><a href="./inquiry/" class="text-gray-300 hover:text-white transition-colors">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">お問い合わせ</h3>
+          <p class="text-gray-300 mb-4">AI導入のご相談はお気軽に</p>
+          <a href="./inquiry/" class="btn-primary-stellar">
+            <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            お問い合わせはこちら
+          </a>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom pt-8 border-t border-gray-700">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-400 text-sm">© 2025 Stellar AIz. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="./privacy/" class="text-gray-400 hover:text-white text-sm transition-colors">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    mobileMenuToggle?.addEventListener('click', () => {
+      navList.classList.toggle('hidden');
+      navList.classList.toggle('absolute');
+      navList.classList.toggle('top-full');
+      navList.classList.toggle('left-0');
+      navList.classList.toggle('right-0');
+      navList.classList.toggle('bg-white');
+      navList.classList.toggle('shadow-lg');
+      navList.classList.toggle('flex-col');
+      navList.classList.toggle('p-4');
+      navList.classList.toggle('space-y-4');
+      navList.classList.toggle('mt-2');
+    });
+    
+    // Parallax initialization
+    if (window.innerWidth > 768) {
+      var rellax = new Rellax('.rellax');
+    }
+  </script>
 </body>
 </html>
