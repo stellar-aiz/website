@@ -32,8 +32,10 @@
   <!-- Common CSS -->
   <link rel="stylesheet" href="./assets/css/common.css">
   
-  <!-- Rellax.js (Parallax) -->
-  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <!-- Removed Rellax.js - Using scroll animations instead -->
+  
+  <!-- Scroll Animations -->
+  <script src="./assets/js/scroll-animations.js" defer></script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header Navigation -->
@@ -74,9 +76,9 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <!-- Parallax Background -->
-      <div class="absolute inset-0 rellax" data-rellax-speed="-5">
-        <div class="absolute inset-0 bg-gradient-to-br from-stellar-dark/90 to-stellar-primary/20"></div>
+      <!-- Background -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-blue-900/90 to-purple-900/95"></div>
       </div>
       
       <!-- Hero Content -->
@@ -111,11 +113,11 @@
     <!-- Stellar AIzとは Section -->
     <section class="py-16 md:py-24 bg-white">
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="section-title-stellar text-center">Stellar AIzとは</h2>
+        <h2 class="section-title-stellar text-center scroll-fade-in">Stellar AIzとは</h2>
         
-        <div class="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto scroll-stagger-group">
           <!-- 戦略 × 爆速開発 -->
-          <div class="text-center animate-fadein">
+          <div class="text-center scroll-fade-up scroll-stagger-item">
             <div class="w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center">
               <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -126,7 +128,7 @@
           </div>
           
           <!-- アジャイル & 実践主義 -->
-          <div class="text-center animate-fadein" style="animation-delay: 0.1s;">
+          <div class="text-center scroll-fade-up scroll-stagger-item">
             <div class="w-20 h-20 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
               <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -137,7 +139,7 @@
           </div>
           
           <!-- 未知への挑戦文化 -->
-          <div class="text-center animate-fadein" style="animation-delay: 0.2s;">
+          <div class="text-center scroll-fade-up scroll-stagger-item">
             <div class="w-20 h-20 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center">
               <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -153,14 +155,14 @@
     <!-- 行動原則（5ミッション） Section -->
     <section class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="section-title-stellar text-center">行動原則</h2>
-        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+        <h2 class="section-title-stellar text-center scroll-fade-in">行動原則</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto scroll-fade-in">
           Stellar AIzの5つのミッション
         </p>
         
         <div class="space-y-6 max-w-4xl mx-auto">
           <!-- Mission 1 -->
-          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+          <div class="card-stellar flex items-start gap-6 scroll-fade-left">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
               1
             </div>
@@ -171,7 +173,7 @@
           </div>
           
           <!-- Mission 2 -->
-          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1.5">
+          <div class="card-stellar flex items-start gap-6 scroll-fade-right">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
               2
             </div>
@@ -182,7 +184,7 @@
           </div>
           
           <!-- Mission 3 -->
-          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+          <div class="card-stellar flex items-start gap-6 scroll-fade-left">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
               3
             </div>
@@ -193,7 +195,7 @@
           </div>
           
           <!-- Mission 4 -->
-          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1.5">
+          <div class="card-stellar flex items-start gap-6 scroll-fade-right">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
               4
             </div>
@@ -204,7 +206,7 @@
           </div>
           
           <!-- Mission 5 -->
-          <div class="card-stellar flex items-start gap-6 rellax" data-rellax-speed="-1">
+          <div class="card-stellar flex items-start gap-6 scroll-fade-left">
             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
               5
             </div>
@@ -220,14 +222,14 @@
     <!-- サービスサマリー Section -->
     <section class="py-16 md:py-24 bg-white">
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="section-title-stellar text-center">提供サービス</h2>
-        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+        <h2 class="section-title-stellar text-center scroll-fade-in">提供サービス</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto scroll-fade-in">
           戦略策定から実装まで、AIの実践を総合的に支援します
         </p>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 scroll-stagger-group">
           <!-- 生成AI導入支援 -->
-          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all scroll-scale-in scroll-stagger-item">
             <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
               <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -238,7 +240,7 @@
           </div>
           
           <!-- 戦略策定支援 -->
-          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all scroll-scale-in scroll-stagger-item">
             <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-lg flex items-center justify-center">
               <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -249,7 +251,7 @@
           </div>
           
           <!-- 爆速PoC開発 -->
-          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all scroll-scale-in scroll-stagger-item">
             <div class="w-16 h-16 mx-auto mb-4 bg-cyan-100 rounded-lg flex items-center justify-center">
               <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -260,7 +262,7 @@
           </div>
           
           <!-- 開発組織・人材育成 -->
-          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all">
+          <div class="card-stellar text-center hover:transform hover:-translate-y-1 transition-all scroll-scale-in scroll-stagger-item">
             <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
               <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -285,14 +287,14 @@
     <!-- 実績ハイライト Section -->
     <section class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="section-title-stellar text-center">実績ハイライト</h2>
-        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto">
+        <h2 class="section-title-stellar text-center scroll-fade-in">実績ハイライト</h2>
+        <p class="section-subtitle-stellar text-center max-w-3xl mx-auto scroll-fade-in">
           多様な業界でAI導入を成功に導いています
         </p>
         
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto scroll-stagger-group">
           <!-- 製造業 -->
-          <div class="card-stellar">
+          <div class="card-stellar scroll-fade-up scroll-stagger-item">
             <div class="text-blue-600 font-bold mb-2">製造業</div>
             <h3 class="text-xl font-bold mb-3">大手電機メーカー</h3>
             <p class="text-gray-600 mb-4">全バリューチェーンのAI導入戦略策定</p>
@@ -305,7 +307,7 @@
           </div>
           
           <!-- 金融業 -->
-          <div class="card-stellar">
+          <div class="card-stellar scroll-fade-up scroll-stagger-item">
             <div class="text-purple-600 font-bold mb-2">金融業</div>
             <h3 class="text-xl font-bold mb-3">大手銀行</h3>
             <p class="text-gray-600 mb-4">AIアーキテクチャ戦略の立案と実装支援</p>
@@ -318,7 +320,7 @@
           </div>
           
           <!-- 海外スタートアップ -->
-          <div class="card-stellar">
+          <div class="card-stellar scroll-fade-up scroll-stagger-item">
             <div class="text-cyan-500 font-bold mb-2">海外スタートアップ</div>
             <h3 class="text-xl font-bold mb-3">遠隔医療スタートアップ</h3>
             <p class="text-gray-600 mb-4">資金調達向けAI機能のPoC開発</p>
@@ -345,13 +347,13 @@
     <!-- CTA Section -->
     <section class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
       <div class="container mx-auto px-4 md:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-fade-in">
           AIで、ビジネスを次のステージへ
         </h2>
-        <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+        <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90 scroll-fade-in">
           まずは気軽にご相談ください。貴社の課題に合わせた最適なAI活用方法をご提案します。
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade-up">
           <a href="./inquiry/" class="btn-accent-stellar text-lg px-8 py-4">
             無料相談を申し込む
           </a>

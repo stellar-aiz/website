@@ -132,6 +132,51 @@ main {
   animation: slideInRight 0.6s ease-out;
 }
 
+/* スクロールアニメーション
+   ================================ */
+.scroll-fade-in,
+.scroll-fade-up,
+.scroll-fade-left,
+.scroll-fade-right,
+.scroll-scale-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in {
+  transform: translateY(30px);
+}
+
+.scroll-fade-up {
+  transform: translateY(30px);
+}
+
+.scroll-fade-left {
+  transform: translateX(-30px);
+}
+
+.scroll-fade-right {
+  transform: translateX(30px);
+}
+
+.scroll-scale-in {
+  transform: scale(0.95);
+}
+
+.scroll-fade-in.is-visible,
+.scroll-fade-up.is-visible,
+.scroll-fade-left.is-visible,
+.scroll-fade-right.is-visible,
+.scroll-scale-in.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* スタガーアニメーション用 */
+.scroll-stagger-item {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 /* アクセシビリティ
    ================================ */
 @media (prefers-reduced-motion: reduce) {
