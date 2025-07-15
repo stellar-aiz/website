@@ -1,0 +1,166 @@
+/* ================================
+   Stellar AIz 共通スタイルシート
+   Tailwind CSS併用版
+   ================================ */
+
+/* Tailwind CSSのベーススタイルを補完
+   ================================ */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS変数定義（Tailwind設定と連携）
+   ================================ */
+:root {
+  /* ヘッダー高さ（Tailwindでは定義できない） */
+  --header-height: 80px;
+  --header-height-mobile: 60px;
+  
+  /* アニメーション */
+  --transition-base: all 0.3s ease;
+}
+
+/* Tailwind補完用のカスタムコンポーネント
+   ================================ */
+   
+/* 共通ボタンスタイル（Tailwindクラスと併用） */
+.btn-primary-stellar {
+  @apply inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-md 
+         hover:bg-blue-700 transition-all duration-300 cursor-pointer;
+}
+
+.btn-secondary-stellar {
+  @apply inline-block px-6 py-3 bg-transparent text-blue-600 font-medium 
+         rounded-md border-2 border-blue-600 hover:bg-blue-600 hover:text-white 
+         transition-all duration-300 cursor-pointer;
+}
+
+.btn-accent-stellar {
+  @apply inline-block px-6 py-3 bg-cyan-500 text-white font-medium rounded-md 
+         hover:bg-cyan-600 transition-all duration-300 cursor-pointer;
+}
+
+/* セクションタイトル（統一感のため） */
+.section-title-stellar {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 mb-6;
+}
+
+.section-subtitle-stellar {
+  @apply text-lg md:text-xl text-gray-600 mb-8 leading-relaxed;
+}
+
+/* カード共通スタイル */
+.card-stellar {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+}
+
+/* グラデーション背景 */
+.gradient-stellar-primary {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #1a202c 100%);
+}
+
+.gradient-stellar-mesh {
+  background: 
+    radial-gradient(at 20% 80%, rgba(59, 130, 246, 0.1) 0, transparent 50%),
+    radial-gradient(at 80% 20%, rgba(124, 58, 237, 0.1) 0, transparent 50%),
+    radial-gradient(at 40% 40%, rgba(6, 182, 212, 0.1) 0, transparent 50%),
+    #1a202c;
+}
+
+/* ヘッダー固定の高さ設定（Tailwindでは設定できない） */
+.site-header {
+  height: var(--header-height);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: var(--header-height-mobile);
+  }
+}
+
+/* メインコンテンツのオフセット */
+main {
+  margin-top: var(--header-height);
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: var(--header-height-mobile);
+  }
+}
+
+/* カスタムアニメーション
+   ================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fadein {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slidein {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* アクセシビリティ
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* カスタムスクロールバー（Webkit系ブラウザ）
+   ================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
